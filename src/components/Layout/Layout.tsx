@@ -35,12 +35,9 @@ export const Layout = () => {
       </div>
 
       <div className={styles.gitWrapper}>
-        <LinkHandler
-          isExternal
-          elHref="https://github.com/Priyanshu84iya"
-        >
+        <LinkHandler isExternal elHref="https://github.com/Priyanshu84iya">
           <span className={clsx(sharedStyles.text, sharedStyles.textUnderline)}>
-            GitHub repo
+            GitHub
           </span>
         </LinkHandler>
       </div>
