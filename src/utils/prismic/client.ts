@@ -17,7 +17,7 @@ const isAbsoluteUrl = (url?: string | null): url is string => {
 export const hasPrismicConfig = isAbsoluteUrl(API_URL);
 
 export const client = hasPrismicConfig
-	? Prismic.client(API_URL, { accessToken: API_TOKEN ?? undefined })
+	? Prismic.client(API_URL as string, { accessToken: API_TOKEN ?? undefined })
 	: null;
 
 export { API_URL, API_TOKEN };
