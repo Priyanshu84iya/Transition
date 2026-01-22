@@ -1,0 +1,101 @@
+.details {
+  &__back-btn {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 40px;
+
+    @include media('>phone') {
+      top: 20px;
+      left: 40px;
+    }
+
+    &__label {
+      cursor: pointer;
+      font-size: 15px;
+      font-family: 'nexa';
+      color: var(--black);
+
+      @include media('>phone') {
+        font-size: 22px;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 7rem;
+    color: var(--white);
+    text-align: center;
+
+    @include media('>phone') {
+      font-size: 15rem;
+    }
+
+    b {
+      font-family: 'nexa';
+    }
+
+    &__wrapper {
+      display: block;
+      transform: translateY(50%);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__container {
+    max-width: 80%;
+    margin: 0 auto;
+
+    @include media('>phone') {
+      max-width: 100rem;
+    }
+  }
+
+  &__p {
+    font-family: 'opensans';
+    font-size: 1.8rem;
+    line-height: 2;
+    color: black;
+    padding: 4rem 0;
+
+    @include media('>phone') {
+      line-height: 2.5;
+      font-size: 2rem;
+      padding: 12rem 0;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &__wrapper {
+      opacity: 0;
+      margin: 0 auto;
+      width: 80%;
+      position: relative;
+
+      @include media('>phone') {
+        width: 70%;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 56.25%;
+
+        @include media('>phone') {
+          padding-bottom: 56.25%;
+        }
+      }
+    }
+  }
+}

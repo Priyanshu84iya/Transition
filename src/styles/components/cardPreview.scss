@@ -1,0 +1,73 @@
+.card-preview {
+  position: relative;
+
+  &__container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+
+    @include media('>phone') {
+      max-width: 55%;
+    }
+
+    &--secondary {
+      justify-content: flex-end;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &__wrapper {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+  }
+
+  &__placeholder {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__curtains-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      overflow: hidden;
+
+      &__wrapper {
+        &__wrapper {
+          transform: translateY(50%);
+        }
+      }
+    }
+
+    &__bottom {
+      overflow: hidden;
+
+      &__wrapper {
+        &__wrapper {
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

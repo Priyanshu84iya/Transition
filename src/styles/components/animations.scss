@@ -1,0 +1,32 @@
+[data-animation='paragraph'] {
+  //The opacity is 0 until the text sliced to spans
+  opacity: 0;
+
+  .line {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  .word {
+    transform: translateY(100%);
+
+    &--active {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.bottom-hide {
+  &__outer {
+    overflow: hidden;
+    display: block;
+  }
+  &__inner {
+    display: block;
+    transform: translateY(100%);
+    &--active {
+      transform: translateY(0);
+    }
+  }
+}
